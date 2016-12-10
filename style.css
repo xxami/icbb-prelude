@@ -1,0 +1,22 @@
+
+html {
+}
+
+body {
+    background: #380914;
+    padding: 0;
+    margin: 0;
+    font: 20px/30px 'Noto Sans', 'Tahoma', 'Arial', 'Helvetica', sans-serif;
+}
+
+main {
+    position: absolute;
+    width: 100vmin;
+    height: 75vmin;
+    left: 50%;
+    margin-left:-50vmin;
+    margin-top:12.5vmin;
+    background: #000000;
+    position: relative;
+}
+

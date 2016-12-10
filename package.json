@@ -1,0 +1,10 @@
+{
+    "name": "icbb-prelude",
+    "description": "icbb-prelude game",
+    "repository": "https://github.com/xxami/icbb-prelude.git",
+    "license": "Unlicense",
+    "author": "xxami, FF0033",
+    "dependencies": {
+        "webpack": "latest"
+    }
+}

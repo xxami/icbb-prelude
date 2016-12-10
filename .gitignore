@@ -1,0 +1,5 @@
+game.js
+*.swp
+node_modules/
+npm-debug.log
+
