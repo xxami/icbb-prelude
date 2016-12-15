@@ -1,0 +1,8 @@
+{
+  "name": "icbb-prelude",
+  "private": "true",
+  "dependencies": {
+    "howler.js": "howler#^2.0.2",
+    "pxloader": "^1.1.2"
+  }
+}

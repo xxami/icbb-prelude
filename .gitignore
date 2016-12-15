@@ -1,0 +1,6 @@
+game.js
+*.swp
+node_modules/
+npm-debug.log
+bower_components/
+.vscode/
