@@ -15,7 +15,7 @@ class SceneManager {
             this._currentScene.clear();
         }
         this._currentScene = scene;
-        this._currentScene.init();
+        this._currentScene.init(this);
     }
 }
 

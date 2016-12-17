@@ -1,12 +1,13 @@
 
 class Scene {
 
-    constructor(containerId) {
-        this._containerId = containerId;
+    init(sceneManager) {
+        this._sceneManager = sceneManager;
     }
 
     clear() {
-        var node = document.getElementById(this._containerId);
+        var containerId = this._sceneManager.containerId;
+        var node = document.getElementById(containerId);
         while (node.firstChild) {
             node.removeChild(node.firstChild());
         }
