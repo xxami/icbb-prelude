@@ -1,0 +1,8 @@
+{
+  "name": "icbb-prelude",
+  "private": "true",
+  "dependencies": {
+    "pxloader": "^1.1.2",
+    "SoundManager2": "soundmanager2#*"
+  }
+}
