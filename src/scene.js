@@ -9,7 +9,7 @@ class Scene {
         var containerId = this._sceneManager.containerId;
         var node = document.getElementById(containerId);
         while (node.firstChild) {
-            node.removeChild(node.firstChild());
+            node.removeChild(node.firstChild);
         }
     }
 }

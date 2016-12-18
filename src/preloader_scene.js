@@ -53,14 +53,16 @@ class PreloaderScene extends scene.Scene {
     }
 
     attachProgressListener() {
+        var progressBar = document.getElementById('progress');
         this.loader.addProgressListener(function(e) {
             if (e.loaded == true) {
                 this.resourcesLoaded += 1;
+                progressBar.value = Math.floor(this.resourcesLoaded / this.resources) * 100
                 console.log(this.resourcesLoaded + ' / ' + this.resources);
             }
             
             if (this.resources == this.resourcesLoaded) {
-                console.log('all resources loaded!')
+                console.log('all resources loaded!');
             }
         }.bind(this));
 
