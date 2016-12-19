@@ -41,7 +41,7 @@ class PreloaderScene extends scene.Scene {
             }
             else if (soundManager.canPlayURL(
                 soundName + formatFallback)) {
-                this.loader.addSound(soundName, soundName + format);
+                this.loader.addSound(soundName, soundName + formatFallback);
             }
             else {
                 throw new Error(
@@ -55,9 +55,10 @@ class PreloaderScene extends scene.Scene {
     attachProgressListener() {
         var progressBar = document.getElementById('progress');
         this.loader.addProgressListener(function(e) {
-            if (e.loaded == true) {
+            if (e.loaded === true) {
                 this.resourcesLoaded += 1;
-                progressBar.value = Math.floor(this.resourcesLoaded / this.resources) * 100
+                progressBar.value = Math.floor(
+                    this.resourcesLoaded / this.resources) * 100
                 console.log(this.resourcesLoaded + ' / ' + this.resources);
             }
             
@@ -65,8 +66,6 @@ class PreloaderScene extends scene.Scene {
                 console.log('all resources loaded!');
             }
         }.bind(this));
-
-        
     }
 
     clear() {

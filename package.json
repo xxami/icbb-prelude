@@ -9,6 +9,7 @@
     "babel-loader": "^6.2.10",
     "babel-preset-es2015": "^6.18.0",
     "bower": "latest",
-    "webpack": "latest"
+    "webpack": "latest",
+    "webpack-strip": "^0.1.0"
   }
 }
