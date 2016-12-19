@@ -1,11 +1,12 @@
 
 var scene = require('./scene.js');
 var resources = require('./resources.js');
+var titleScene = require('./title_scene.js');
 
 class PreloaderScene extends scene.Scene {
 
     init(sceneManager) {
-        this._sceneManager = sceneManager;
+        this.sceneManager = sceneManager;
         console.log('PreloaderScene::init')
 
         this.loader = new PxLoader();
@@ -63,7 +64,10 @@ class PreloaderScene extends scene.Scene {
             }
             
             if (this.resources == this.resourcesLoaded) {
+                this.clear();
                 console.log('all resources loaded!');
+                var scene = new titleScene.TitleScene();
+                this.sceneManager.switchScene(scene);
             }
         }.bind(this));
     }
