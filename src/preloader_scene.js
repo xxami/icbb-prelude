@@ -1,11 +1,12 @@
 
 var scene = require('./scene.js');
 var resources = require('./resources.js');
+var titleScene = require('./title_scene.js');
 
 class PreloaderScene extends scene.Scene {
 
     init(sceneManager) {
-        this._sceneManager = sceneManager;
+        this.sceneManager = sceneManager;
         console.log('PreloaderScene::init')
 
         this.loader = new PxLoader();
@@ -41,7 +42,7 @@ class PreloaderScene extends scene.Scene {
             }
             else if (soundManager.canPlayURL(
                 soundName + formatFallback)) {
-                this.loader.addSound(soundName, soundName + format);
+                this.loader.addSound(soundName, soundName + formatFallback);
             }
             else {
                 throw new Error(
@@ -55,18 +56,20 @@ class PreloaderScene extends scene.Scene {
     attachProgressListener() {
         var progressBar = document.getElementById('progress');
         this.loader.addProgressListener(function(e) {
-            if (e.loaded == true) {
+            if (e.loaded === true) {
                 this.resourcesLoaded += 1;
-                progressBar.value = Math.floor(this.resourcesLoaded / this.resources) * 100
+                progressBar.value = Math.floor(
+                    this.resourcesLoaded / this.resources) * 100
                 console.log(this.resourcesLoaded + ' / ' + this.resources);
             }
             
             if (this.resources == this.resourcesLoaded) {
+                this.clear();
                 console.log('all resources loaded!');
+                var scene = new titleScene.TitleScene();
+                this.sceneManager.switchScene(scene);
             }
         }.bind(this));
-
-        
     }
 
     clear() {
