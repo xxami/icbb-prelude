@@ -1,7 +1,7 @@
 
 exports.images = {
     list: [
-        "res/img"
+        "res/title_bg"
     ],
 
     format: '.png'
@@ -9,7 +9,7 @@ exports.images = {
 
 exports.sounds = {
     list: [
-        "res/file"
+        "res/title_bgm",
     ],
 
     format: '.ogg',
