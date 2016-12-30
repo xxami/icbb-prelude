@@ -1,5 +1,6 @@
 
 html {
+    font: 12px/16px 'Noto Sans', 'Tahoma', 'Arial', 'Helvetica', sans-serif;
 }
 
 body {
@@ -10,7 +11,6 @@ body {
     height:100vh;
     width:100vw;
     overflow:hidden;
-    font: 20px/30px 'Noto Sans', 'Tahoma', 'Arial', 'Helvetica', sans-serif;
 }
 
 main {
@@ -67,4 +67,23 @@ progress{
     border:0;
     outline:0;
     appearance: none;
+}
+
+div#container{
+    position:relative;
+    height:100%;
+    width:100%;
+}
+div#textbox{
+    box-sizing:border-box;
+    position:absolute;
+    bottom:0;
+    width:92%;
+    height:30%;
+    margin-left:4%;
+    margin-bottom:4%;
+    background:linear-gradient(to bottom,rgba(100,86,235,0.4),rgba(94,127,255,0.7));
+    color:#fff;
+    font:1rem/1.5 "comic sans ms", arial, sans-serif;
+    padding:2% 2.5%;
 }

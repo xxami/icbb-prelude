@@ -5,7 +5,11 @@ class VisualNovelScene extends scene.Scene {
 
     init(sceneManager) {
         this.sceneManager = sceneManager;
-        this.containerId = this.sceneManager.containerId;
+        this.container = document.getElementById(this.sceneManager.containerId);
+        let html = '<div id="container">'+
+        '<div id="textbox">text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here text here</div>'+
+        '</div>';
+        this.container.innerHTML = html;
         console.log('VisualNovelScene::init');
     }
 
