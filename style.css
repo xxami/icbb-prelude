@@ -19,45 +19,61 @@ main {
     width:384px;
     height:216px;
     position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    font-size:1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background: #000000;
     background-size:100% auto;
 }
 
-
-@media(min-width: 384px){
-    main{
-        width:384px;
-        height:216px;
-    }
+main{
+    width:384px;
+    height:216px;
 }
+html{
+    font-size:9.5px;
+}
+
 @media(min-width: 480px){
     main{
         width:480px;
         height:270px;
     }
+    html{
+        font-size:12px;
+    }
 }
+
 @media(min-width: 640px){
     main{
         width:640px;
         height:360px;
     }
+    html{
+        font-size:16px;
+    }
 }
+
 @media(min-width: 960px){
     main{
         width:960px;
         height:540px;
     }
+    html{
+        font-size:24px;
+    }
 }
+
 @media(min-width: 1280px){
     main{
         width:1280px;
         height:720px;
     }
+    html{
+        font-size:32px;
+    }
 }
-
 
 progress{
     width:100%;

@@ -1,5 +1,7 @@
 
 var scene = require('./scene.js');
+var scenario = require('./vn_scenario.js');
+var keys = require('./keys.js');
 
 class VisualNovelScene extends scene.Scene {
 
