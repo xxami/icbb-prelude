@@ -45,8 +45,8 @@ class VisualNovelScene extends scene.Scene {
         if (this.frameTexts.length == 0) {
             if (this.frame == (this.frameCount - 1)) {
                 this.clear();
-                var scene = new orderScene.OrderScene();
-                this.sceneManager.switchScene(scene);
+                let nextScene = new orderScene.OrderScene();
+                this.sceneManager.switchScene(nextScene);
             }
             else {
                 this.frame += 1;

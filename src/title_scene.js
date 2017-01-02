@@ -25,8 +25,8 @@ class TitleScene extends scene.Scene {
 
     startGame() {
         this.clear();
-        var scene = new vnScene.VisualNovelScene();
-        this.sceneManager.switchScene(scene);
+        let nextScene = new vnScene.VisualNovelScene();
+        this.sceneManager.switchScene(nextScene);
     }
 
     clear() {

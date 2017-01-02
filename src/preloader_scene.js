@@ -66,8 +66,8 @@ class PreloaderScene extends scene.Scene {
             if (this.resources == this.resourcesLoaded) {
                 this.clear();
                 console.log('all resources loaded!');
-                var scene = new titleScene.TitleScene();
-                this.sceneManager.switchScene(scene);
+                let nextScene = new titleScene.TitleScene();
+                this.sceneManager.switchScene(nextScene);
             }
         }.bind(this));
     }
